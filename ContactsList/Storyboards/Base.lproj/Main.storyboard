@@ -144,7 +144,9 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dhO-0h-Frn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Persons List" id="Wf6-Tu-0tl"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="Wf6-Tu-0tl">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="zYB-UI-7cO"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktN-hW-PXA">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

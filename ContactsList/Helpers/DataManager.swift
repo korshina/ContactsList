@@ -11,7 +11,7 @@ class DataManager {
    
     static let shared = DataManager()
     
-    let names = [
+    var names = [
         "Kuentin",
         "Aldo",
         "Valentine",
@@ -24,7 +24,7 @@ class DataManager {
         "Robert"
     ]
     
-    let surnames = [
+    var surnames = [
         "Okdell",
         "Epine",
         "Alva",
@@ -37,7 +37,7 @@ class DataManager {
         "Aramona"
     ]
     
-    let emails = [
+    var emails = [
     "iamawind@gmail.com",
     "likeastone@mail.ru",
     "ironeggs@yandex.ru",
@@ -50,7 +50,7 @@ class DataManager {
     "bravebird@gmail.ru"
     ]
     
-    let phones = [
+    var phones = [
     "7(495)895-70-78",
     "7(495)830-48-23",
     "7(495)417-92-57",
@@ -65,13 +65,18 @@ class DataManager {
     
     func getRandomPersons() -> [Person] {
         var persons: [Person] = []
+        names.shuffle()
+        surnames.shuffle()
+        emails.shuffle()
+        phones.shuffle()
         
-        for name in names {
+        for index in 1...names.count - 1 {
+            
             let person = Person(
-                name: name,
-                suname: surnames.randomElement() ?? "",
-                email: emails.randomElement() ?? "",
-                phone: phones.randomElement() ?? ""
+                name: names[index],
+                suname: surnames[index],
+                email: emails[index],
+                phone: phones[index]
             )
             persons.append(person)
         }
