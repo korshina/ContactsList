@@ -13,7 +13,7 @@ class ContactsWithSectionsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDataFromContactsTVC()
+        getDataFromContactsTableVC()
         
     }
 
@@ -54,7 +54,9 @@ class ContactsWithSectionsTableViewController: UITableViewController {
         return cell
     }
     
-    private func getDataFromContactsTVC() {
+    // MARK: Private methods
+    
+    private func getDataFromContactsTableVC() {
         guard let viewControllers = tabBarController?.viewControllers else { return }
         viewControllers.forEach { viewController in
             guard let contactsTableVC = viewController as? ContactsTableViewController else { return }
@@ -62,6 +64,4 @@ class ContactsWithSectionsTableViewController: UITableViewController {
         }
     }
 
-
-    
 }

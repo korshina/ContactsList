@@ -29,6 +29,12 @@ class ContactsTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let person = contacts[indexPath.row]
+        performSegue(withIdentifier: "showDetail", sender: person)
+    }
 
     
     // MARK: - Navigation
@@ -37,14 +43,4 @@ class ContactsTableViewController: UITableViewController {
             guard let detailVC = segue.destination as? DetailViewController else { return }
             detailVC.person = sender as? Person
         }
-}
-
-// MARK: Table View Delegate
-
-extension ContactsTableViewController {
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let person = contacts[indexPath.row]
-        performSegue(withIdentifier: "showDetail", sender: person)
-    }
-    
 }
