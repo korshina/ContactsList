@@ -11,10 +11,6 @@ class ContactsTableViewController: UITableViewController {
     
     let contacts = DataManager.shared.getRandomPersons()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,12 +48,3 @@ extension ContactsTableViewController {
     }
     
 }
-
-//extension ContactsTableViewController: UITabBarControllerDelegate {
-//
-//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-//        tabBarController.delegate = self
-//        guard let contactsWithSectionsVC = viewController as? ContactsWithSectionsTableViewController else { return }
-//                contactsWithSectionsVC.contacts = contacts
-//    }
-//}

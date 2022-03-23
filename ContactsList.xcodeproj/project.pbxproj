@@ -62,12 +62,10 @@
 		C33B029727EA61ED00F83DD2 /* ContactsList */ = {
 			isa = PBXGroup;
 			children = (
-				C33B029827EA61ED00F83DD2 /* AppDelegate.swift */,
-				C33B029A27EA61ED00F83DD2 /* SceneDelegate.swift */,
 				C33B02B827EBA5BA00F83DD2 /* Helpers */,
 				C33B02B327EA639100F83DD2 /* ViewControllers */,
 				C33B02AC27EA632E00F83DD2 /* Storyboards */,
-				C33B02A127EA61EE00F83DD2 /* Assets.xcassets */,
+				C33B02B927EBA87B00F83DD2 /* Resourses */,
 				C33B02A627EA61EE00F83DD2 /* Info.plist */,
 			);
 			path = ContactsList;
@@ -95,9 +93,19 @@
 		C33B02B827EBA5BA00F83DD2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C33B029A27EA61ED00F83DD2 /* SceneDelegate.swift */,
+				C33B029827EA61ED00F83DD2 /* AppDelegate.swift */,
 				C33B02B627EA63BD00F83DD2 /* DataManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C33B02B927EBA87B00F83DD2 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				C33B02A127EA61EE00F83DD2 /* Assets.xcassets */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
